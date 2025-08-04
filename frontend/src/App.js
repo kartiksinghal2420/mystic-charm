@@ -482,6 +482,8 @@ function App() {
           onClose={() => setSelectedProduct(null)}
         />
       )}
+      
+      <Footer />
     </div>
   );
 }
