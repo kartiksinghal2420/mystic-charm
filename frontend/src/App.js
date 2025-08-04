@@ -5,6 +5,135 @@ import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
+// Footer Component
+const Footer = () => {
+  return (
+    <footer className="mystical-footer">
+      <div className="container mx-auto px-4 py-12">
+        <div className="footer-content">
+          {/* Company Info */}
+          <div className="footer-section">
+            <div className="footer-logo">
+              <h3 className="text-2xl font-bold text-white">✨ MysticCharms</h3>
+              <p className="text-purple-200 text-sm mb-4">Spiritual Treasures & Lucky Charms</p>
+            </div>
+            <p className="footer-description">
+              Discover authentic spiritual treasures and mystical artifacts to bring positive energy, 
+              protection, and luck into your life. Each item is carefully selected for its spiritual 
+              properties and healing benefits.
+            </p>
+            <div className="social-links">
+              <a href="#" className="social-link">📧</a>
+              <a href="#" className="social-link">📱</a>
+              <a href="#" className="social-link">🐦</a>
+              <a href="#" className="social-link">📷</a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="footer-section">
+            <h4 className="footer-title">Shop</h4>
+            <ul className="footer-links">
+              <li><a href="#" className="footer-link">All Products</a></li>
+              <li><a href="#" className="footer-link">🔮 Crystals & Gems</a></li>
+              <li><a href="#" className="footer-link">✨ Spiritual Jewelry</a></li>
+              <li><a href="#" className="footer-link">🧿 Protection Charms</a></li>
+              <li><a href="#" className="footer-link">🌙 Healing Stones</a></li>
+              <li><a href="#" className="footer-link">🌟 Featured Items</a></li>
+            </ul>
+          </div>
+
+          {/* Customer Service */}
+          <div className="footer-section">
+            <h4 className="footer-title">Customer Care</h4>
+            <ul className="footer-links">
+              <li><a href="#" className="footer-link">Contact Us</a></li>
+              <li><a href="#" className="footer-link">Shipping Info</a></li>
+              <li><a href="#" className="footer-link">Return Policy</a></li>
+              <li><a href="#" className="footer-link">Size Guide</a></li>
+              <li><a href="#" className="footer-link">Care Instructions</a></li>
+              <li><a href="#" className="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+
+          {/* Contact & Policies */}
+          <div className="footer-section">
+            <h4 className="footer-title">Contact & Legal</h4>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-icon">📧</span>
+                <div>
+                  <p className="contact-label">Email</p>
+                  <a href="mailto:info@mysticcharms.com" className="contact-value">info@mysticcharms.com</a>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📞</span>
+                <div>
+                  <p className="contact-label">Phone</p>
+                  <a href="tel:+1-555-MYSTIC" className="contact-value">+1 (555) MYSTIC</a>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📍</span>
+                <div>
+                  <p className="contact-label">Address</p>
+                  <p className="contact-value">123 Spiritual Way<br />Crystal City, CA 90210</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="policy-links">
+              <a href="#" className="policy-link">Privacy Policy</a>
+              <a href="#" className="policy-link">Terms of Service</a>
+              <a href="#" className="policy-link">Cookie Policy</a>
+              <a href="#" className="policy-link">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="newsletter-section">
+          <div className="newsletter-content">
+            <div className="newsletter-text">
+              <h4 className="newsletter-title">🌟 Join Our Mystical Journey</h4>
+              <p className="newsletter-description">
+                Subscribe to receive spiritual insights, new product alerts, and exclusive offers
+              </p>
+            </div>
+            <div className="newsletter-form">
+              <input 
+                type="email" 
+                placeholder="Enter your email for spiritual updates..." 
+                className="newsletter-input"
+              />
+              <button className="newsletter-button">✨ Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="footer-bottom">
+          <div className="footer-bottom-content">
+            <p className="copyright">
+              © 2025 MysticCharms. All rights reserved. | Spreading positive energy since 2020 ✨
+            </p>
+            <div className="payment-methods">
+              <span className="payment-text">We Accept:</span>
+              <div className="payment-icons">
+                <span className="payment-icon">💳</span>
+                <span className="payment-icon">💎</span>
+                <span className="payment-icon">🏦</span>
+                <span className="payment-icon">📱</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 // Header Component
 const Header = ({ currentPage, setCurrentPage, searchTerm, setSearchTerm }) => {
   return (
